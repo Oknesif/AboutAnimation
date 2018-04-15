@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AboutAnimation</string>
+    <string name="main_title">la delice</string>
+    <string name="main_subtitle">pastry shop</string>
+    <string name="about_title">about us</string>
+    <string name="about_content">La Delice pastry shp opened in May 2010 and is located inside the Smith Hotel Brooklyn. Since then we have maintained serving quality and delicious pastry every single day.</string>
+    <string name="menu_title">menu</string>
+    <string name="menu_content">Our fresh pastry is a multi-layered pastry dough made of paper-thin layers of fat (butter or vegetable margarine) between paper-thin layers of dough. In the oven, the liquid in both the butter and the dough rapidly evaporates, puffing the individual layers upwards.</string>
+    <string name="catalog_title">catalog</string>
+    <string name="catalog_content">We couldn\'t meet the demand from friends and family - this alerted us to the fact that we might be onto something really exceptional.So one year we decided we would try and go and see Ramon and ask him if he could sell wholesale honey to us.</string>
+</resources>
