@@ -99,4 +99,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/recycler_guideline" />
 
+    <View
+        android:id="@+id/touch_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </com.zzzombiecoder.aboutanimation.collapsing.layout.CollapsingConstraintLayout>

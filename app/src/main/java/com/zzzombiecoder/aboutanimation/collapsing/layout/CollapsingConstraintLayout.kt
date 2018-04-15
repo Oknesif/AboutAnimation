@@ -32,6 +32,7 @@ class CollapsingConstraintLayout @JvmOverloads constructor(
     private lateinit var titleView: TextView
     private lateinit var subTitleView: TextView
     private lateinit var floatingActionButton: FloatingActionButton
+    private lateinit var touchView: View
 
     private lateinit var mainGuideline: Guideline
     private lateinit var imageGuideline: Guideline
@@ -49,6 +50,7 @@ class CollapsingConstraintLayout @JvmOverloads constructor(
             mainGuideline = findViewById(R.id.main_guideline)
             imageGuideline = findViewById(R.id.image_horizontal_guideline)
             recyclerGuideline = findViewById(R.id.recycler_guideline)
+            touchView = findViewById(R.id.touch_view)
 
             imageView = findViewById(R.id.image_view)
             floatingActionButton = findViewById(R.id.fab)
@@ -62,6 +64,7 @@ class CollapsingConstraintLayout @JvmOverloads constructor(
         } catch (ex: Exception) {
             throw IllegalArgumentException("Probably wrong layout: ${Log.getStackTraceString(ex)}")
         }
+        touchView.setOnTouchListener(touchListener)
         setOnTouchListener(touchListener)
     }
 
@@ -74,6 +77,7 @@ class CollapsingConstraintLayout @JvmOverloads constructor(
                         scroller.forceFinished(true)
                         val isCollapsing: Boolean = velocityY < 0
                         if (shouldUpdateGuidelines(isCollapsing)) {
+                            touchView.visibility = if (isCollapsing) View.GONE else View.VISIBLE
                             animateRecyclerItems(isCollapsing)
                             val fromValue = if (isCollapsing) scrollerDistance else 0
                             val dX = if (isCollapsing) -scrollerDistance else scrollerDistance
